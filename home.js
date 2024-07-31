@@ -1,27 +1,33 @@
-function createBubble() { 
-    const section = document.querySelector("Section"); 
-    const createElement = document.createElement("span"); 
-    var size = Math.random() * 60; 
+window.onload = function() {
+  function createBubble() { 
+      const section = document.querySelector("section"); 
+      if (!section) {
+          console.error("Section not found");
+          return;
+      }
 
-    createElement.style.animation =  
-      "animation 8s linear infinite"; 
-    createElement.style.width = 180 + size + "px"; 
-    createElement.style.height = 180 + size + "px"; 
-    createElement.style.left =  
-      Math.random() * innerWidth + "px"; 
+      const createElement = document.createElement("span"); 
+      var size = Math.random() * 60; 
 
-    createElement.style.top = (window.innerHeight + 100) + "px";
+      createElement.style.position = "absolute"; // Ensure elements are positioned correctly
+      createElement.style.animation = "animation 8s linear infinite"; 
+      createElement.style.width = 180 + size + "px"; 
+      createElement.style.height = 180 + size + "px"; 
+      createElement.style.left = Math.random() * innerWidth + "px"; 
+      createElement.style.top = (window.innerHeight + 100) + "px";
 
-    createElement.onclick = function() { 
-        createElement.remove(); 
-    };
+      createElement.style.pointerEvents = "auto"; // Ensure pointer events are enabled
 
-    section.appendChild(createElement); 
+      createElement.onclick = function() { 
+          this.remove(); // Remove the clicked element
+      };
 
-    console.log(createElement);
+      section.appendChild(createElement); 
 
-    setTimeout(() => { 
-        createElement.remove(); 
-    }, 5000);
-} 
-setInterval(createBubble, 100); 
+      setTimeout(() => { 
+          createElement.remove(); 
+      }, 5000);
+  } 
+
+  setInterval(createBubble, 200); 
+};
