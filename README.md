@@ -1,2 +1,2 @@
 # teamchat
-Collaberation at it's finest.
+Collaboration at it's finest.
