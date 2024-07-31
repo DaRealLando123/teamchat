@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TC - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        console.log("Checking for login cookies...");
-        if(localStorage.getItem("userdata" == undefined)){
-            window.location('createaccount');
-        }
-    </script>
+    <section> 
+        <h1>TeamChat</h1>
+        <br>
+        <h2>A pretty good alternative</h2> 
+    </section>
+
+    <script src="home.js"></script>
 </body>
 </html>
