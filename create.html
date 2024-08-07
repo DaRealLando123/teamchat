@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubb - Create</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubb - Create Account</title>
+    <link rel="stylesheet" href="create.css" />
 </head>
 <body>
-    <script>
-        
-    </script>
+    <section id="main">
+        <h2>Create Your Account</h2>
+        <br />
+        <form id="account-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+            <br />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <br />
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" />
+            <br />
+            <a href="create-account.html" class="button">Create Account</a>
+            <a href="home.html" class="button">🗙</a>
+        </form>
+    </section>
+    <script src="home.js"></script>
 </body>
 </html>
